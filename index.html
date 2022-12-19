@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      pre{
+        font-size:30px;
+        color: brown;
+      }
+      h1{
+        font-size:45px;
+      }
+    </style>
+</head>
+<body>
+    <h1>Question-1:Count Characters</h1>
+    <pre>
+       const countCharacters = (S) => 
+      { 
+      let brr=[];
+        let A=0;
+      let D=0;
+      for(let i=0;i<(S.length);i++)
+       {
+           if(S[i]=="A")
+            {
+              A++;
+            }
+           else if(S[i]=="D")
+           {
+             D++;
+           }
+        }
+          brr.push(A,D)
+          return brr; 
+       };
+      </pre>
+ 
+ 
+<h1>Question-2:Count the Heads</h1>
+    <pre>var Count_Occ = (s) => 
+        {
+          let str = s.split('').sort().join('');
+            let ans = "";
+            for(let i=0;i<(str.length);i++){
+              let count = 0;
+              for(let j=0;j<(str.length);j++){
+                if(str[i]===str[j]&&i>j){
+                  break;
+                }
+                if(str[i]===str[j]){
+                  count++;
+                }
+              }
+              if(count>1){
+                ans+=str[i]+count;
+              }
+            }
+            return ans;  
+        };</pre>
+    <h1>Question-3:Count the Vowels</h1>
+    <pre>var Count_Vowels= (S) => 
+{
+   // let count = 0;
+   let v=/[a,e,i,o,u]/g;
+   const vow = S.match(v);
+  return vow.length;
+};
+</pre>
+    <h1>Question-4:Concatenate the Strings</h1>
+    <pre>var Concatenate_Strings = (S1, S2) => 
+{
+    return S1.concat(S2)  ;
+};</pre>
+    <h1>Question-5:Find Length</h1>
+    <pre>const findLength = (S) => 
+{
+   return S.toString().length; 
+};</pre>
+    <h1>Question-6:Find the Winner</h1>
+    <pre> 
+var Game_Winner = (S) => 
+{
+  let A=0;
+  let D=0;
+  for(let i=0;i<(S.length);i++){
+    if("A"==S[i]){
+      A++
+    }
+    else{
+      D++
+    }
+  }
+  if(A==D){
+    return "Draw"
+  }
+  else if(A>D){
+    return "Aditya"
+  }
+  else{
+    return "Danish"
+  }
+}
+ 
+</pre>
+    <h1>Question-7:Join Strings</h1>
+    <pre>
+const joinStrings = (S, P) => 
+{
+   return S.concat(P)
+};
+ 
+</pre>
+    <h1>Question-8:Plaindrome Check</h1>
+    <pre>var Palin_Check = (str) =>
+        {
+             let r=str.split("").reverse().join("");
+             if(str===r){
+               return 'True'
+             }
+             else{
+               return "False"
+             }
+             
+        }</pre>
+    <h1>Question-9:Reverse the String</h1>
+    <pre>
+var Reverse_String = (str) => 
+{
+     return str.split("").reverse().join("")
+};
+ 
+</pre>
+<h1>Question-:10 Match the Strings</h1>
+<pre>var String_Match = (S1,S2) => 
+{
+   //here i am using ternary operator
+   return (S1===S2 ?"YES":"NO")
+};</pre>
+<h1>Question-:11 String Replace</h1>
+<pre>var Replace = (S, pattern , text) => 
+{
+     return (S.replace(pattern,text)) ;
+};</pre>
+<h1>Question-:12 Split the String</h1>
+<pre>var Split_the_string = (S) => 
+{
+  
+  return S.split(" ")     
+};</pre>
+<h1>Question-13: Count the Vowels and Consonants</h1>
+<pre>var Count_Vowels= (S) => 
+{
+     let v=/[a,e,i,o,u]/g;
+   const vow = S.match(v);
+  return vow.length; 
+  <!-- return S.match(/[a,e,i,o,u]/g).length;   -->
+};
+var Count_Consonants= (S) => 
+{
+      let c=/[b,c,d,f,g,h,j,k,l,m,n,p,q,r,s,t,v,w,x,y,z,B,C,D,F,G,H,J,K,L,M,N,P,Q,R,S,T,V,W,X,Y,Z]/g;
+   const con = S.match(c);
+  return con.length; 
+  <!-- return S.match(/[^aeiou]/g).length;   -->
+};
+ </pre>
+</body>
+</html>
